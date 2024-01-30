@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Button Login Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="/static/loginPage.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/static/loginPage.css') }}">
+    <!-- <script type="module" src="/static/signIn.js" defer></script> -->
+    <script type="module" src="{{ url_for('static', filename='/static/signIn.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <div class="icon__of__web">
+            <img src="/static/coffee.png" alt="coffee">
+        </div>
+        <nav class="__navigationOperator">
+            <ul>
+                <li class="popUp"><a href="#">Home</a></li>
+                <li class="popUp"><a href="#">Core System</a></li>
+                <li class="popUp"><a href="#">Core Content</a></li>
+                <li class="popUp"><a href="#">Help & Support</a></li>
+                <li class="popUp"><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="__appIcons">
+            <a href="#">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+        </div>
+        <div class="menubar">
+            <a href="#" onclick="sideBar()"><i class="fa-solid fa-bars"></i></a>
+        </div>
+    </header>
+    <header class="sidebar">
+        <div class="crossbar">
+            <a href="#" onclick="closeBar()"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+        <nav class="__navigationOperator">
+            <ul>
+                <li><a style="color: #00fe72;" href="#" class="popUp">Home</a></li>
+                <li><a style="color: #00fe72;" href="#" class="popUp">Core System</a></li>
+                <li><a style="color: #00fe72;" href="#" class="popUp">Core Content</a></li>
+                <li><a style="color: #00fe72;" href="#" class="popUp">Help & Support</a></li>
+                <li><a style="color: #00fe72;" href="#" class="popUp">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="__appIcons">
+            <a href="#">
+                <i class="fa-brands fa-facebook" style="color: #00fe72;"></i>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-instagram" style="color: #00fe72;"></i>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-x-twitter" style="color: #00fe72;"></i>
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="login-box">
+            <h2>Sign In</h2><ion-icon name="people-sharp"></ion-icon>
+            <form>
+                <div class="user-box">
+                    <input type="text" name="" required="" id="Email" placeholder=">">
+                    <label>Email</label>
+                </div><ion-icon name="lock-closed-sharp"></ion-icon>
+
+                <div class="user-box">
+                    <input type="password" name="" required="" id="pass" placeholder=">">
+                    <label>Password</label>
+                </div>
+                <a id="hello" href="#">
+                    <!-- onclick="authentication()" -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Submit
+                </a>
+                <div style="margin-top: 40px;">
+                    Don't Have an Account ? <span><a href="/templates/signUpPage.html" class="other"
+                            style="text-decoration: none; color: #00fe72;">Sign Up</a></span>
+                </div>
+            </form>
+        </div>
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </main>
+
+    <script>
+        function sideBar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'inline-block';
+        }
+    
+        function closeBar() {
+            const crossbar = document.querySelector('.sidebar');
+            crossbar.style.display = 'none';
+        }
+    </script>
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+
